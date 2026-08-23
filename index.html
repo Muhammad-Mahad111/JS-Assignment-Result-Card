@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result Card</title>
+    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+    <link rel="stylesheet" href="./Assets/CSS/btn.css">
+  </head>
+  <body>
+    <form onsubmit="resultCardGeneration(event)">
+      <h1>Student Result Card Form</h1>
+
+      <!-- Student Information -->
+      <h2>Student Information</h2>
+      <div class="studentInfo">
+
+        <!-- full name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" />
+        <div id="fullNameError"></div>
+
+        <!-- father name -->
+        <label for="fatherName">Father Name:</label>
+        <input type="text" id="fatherName" />
+        <div id="fatherNameError"></div>
+
+        <!-- class  -->
+        <label for="studentClass">Class:</label>
+        <select id="studentClass">
+          <option value="">Select Class</option>
+          <option value="1">Class 1</option>
+          <option value="2">Class 2</option>
+          <option value="3">Class 3</option>
+          <option value="4">Class 4</option>
+          <option value="5">Class 5</option>
+          <option value="6">Class 6</option>
+          <option value="7">Class 7</option>
+          <option value="8">Class 8</option>
+        </select>
+        <div id="studentClassError"></div>
+      </div>
+
+      <!-- Subject Marks -->
+      <h2>Subject Marks</h2>
+      <div class="subjects">
+
+        <!-- Math -->
+        <div class="subjectField">
+          <label for="math">Math:</label>
+          <input type="number" id="math" min="0" max="100" />
+          <div id="mathError"></div>
+        </div>
+
+        <!-- Science -->
+        <div class="subjectField">
+          <label for="science">Science:</label>
+          <input type="number" id="science" min="0" max="100" />
+          <div id="scienceError"></div>
+        </div>
+
+        <!-- Computer -->
+        <div class="subjectField">
+          <label for="computer">Computer:</label>
+          <input type="number" id="computer" min="0" max="100" />
+          <div id="computerError"></div>
+        </div>
+
+        <!-- Pakistan Studies -->
+        <div class="subjectField">
+          <label for="pakistanStudies">Pakistan Studies:</label>
+          <input type="number" id="pakistanStudies" min="0" max="100" />
+          <div id="pakistanStudiesError"></div>
+        </div>
+
+        <!-- English -->
+        <div class="subjectField">
+          <label for="english">English:</label>
+          <input type="number" id="english" min="0" max="100" />
+          <div id="englishError"></div>
+        </div>
+
+        <!-- Urdu -->
+        <div class="subjectField">
+          <label for="urdu">Urdu:</label>
+          <input type="number" id="urdu" min="0" max="100" />
+          <div id="urduError"></div>
+        </div>
+      </div>
+
+      <!-- Remarks -->
+      <div class="remarksSection">
+        <label for="remarks">Remarks by Teacher:</label>
+        <input type="text" id="remarks" />
+        <div id="remarksError"></div>
+      </div>
+
+      <br />
+
+      <!-- Button -->
+      <button type="submit">Generate Result Card</button>
+    </form>
+
+    <!-- Result Card -->
+    <div id="resultCard">
+      <h1 id="resultHeading"></h1>
+      <h2 id="studentInformation"></h2>
+      <p id="displayFullName"></p>
+      <p id="displayFatherName"></p>
+      <p id="displayClass"></p>
+      <h2 id="subjectMarks"></h2>
+      <p id="displayMath"></p>
+      <p id="displayScience"></p>
+      <p id="displayComputer"></p>
+      <p id="displayPakistanStudies"></p>
+      <p id="displayEnglish"></p>
+      <p id="displayUrdu"></p>
+      <h2 id="finalResult"></h2>
+      <p id="displayTotalMarks"></p>
+      <p id="displayPercentage"></p>
+      <p id="displayGrade"></p>
+      <p id="displayRemarks"></p>
+    </div>
+
+    <script src="./Assets/JS/script.js"></script>
+  </body>
+</html>

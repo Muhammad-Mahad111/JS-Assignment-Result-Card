@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Card</title>
+</head>
+<body>
+    <form action="" onsubmit="result(event)">
+        <h1>Result Card</h1>
+        <h2>Enter Marks of following Subjects:</h2>
+        <label for="">Math: <input type="number" id="math"></label>
+        <label for="">Science: <input type="number" id="sci"></label>
+        <label for="">Computer: <input type="number" id="comp"></label>
+        <label for="">English: <input type="number" id="eng"></label>
+        <button>Result</button>
+    </form>
+    <p id="errorOut" style="color: red; font-weight: bold;"></p>
+    <h2 id="marksOut"></h2>
+    <p id="mathOut"></p>
+    <p id="sciOut"></p>
+    <p id="compOut"></p>
+    <p id="engOut"></p>
+    <h2 id="h2Result"></h2>
+    <p id="totalOut"></p>
+    <p id="percentageOut"></p>
+    <p id="gradeOut"></p>
+
+    <script src="./script.js"></script>
+</body>
+</html>
