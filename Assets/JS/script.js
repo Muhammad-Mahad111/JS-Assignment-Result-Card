@@ -148,7 +148,7 @@ function resultCardGeneration(event) {
   result.totalMarks = result.math + result.science + result.computer + result.pakistanStudies + result.english + result.urdu;
 
   // Calculate percentage
-  result.percentage = (result.totalMarks / 600) * 100;
+  result.percentage = Math.floor((result.totalMarks / 600) * 100);
 
   // Grade system
   let grade = "";
