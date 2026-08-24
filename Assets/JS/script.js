@@ -3,6 +3,7 @@ function resultCardGeneration(event) {
   // Student information object
 
   let student = {
+    rollNumber: rollNumber.value,
     fullName: fullName.value,
     fatherName: fatherName.value,
     studentClass: studentClass.value,
@@ -21,6 +22,15 @@ function resultCardGeneration(event) {
 
   // Checking empty fields
   let isValid = true;
+
+  // Roll No
+  if (student.rollNumber === "") {
+    rollNumberError.innerHTML = "Required Field is not filled.";
+    rollNumberError.style.color = "red";
+    isValid = false;
+  } else {
+    rollNumberError.innerHTML = "";
+  }
 
   // full name feild
   if (student.fullName === "") {
@@ -170,6 +180,7 @@ function resultCardGeneration(event) {
   // Displaying Result Card
   resultHeading.innerHTML = "Student Result Card";
   studentInformation.innerHTML = "Student Information";
+  displayRollNumber.innerHTML = "Roll Number: " + student.rollNumber;
   displayFullName.innerHTML = "Full Name: " + student.fullName;
   displayFatherName.innerHTML = "Father Name: " + student.fatherName;
   displayClass.innerHTML = "Class: " + student.studentClass;
@@ -187,6 +198,7 @@ function resultCardGeneration(event) {
   displayRemarks.innerHTML = "Remarks by Teacher: " + result.remarks;
   
   // Cleaning Feilds
+  rollNumber.value = "";
   fullName.value = "";
   fatherName.value = "";
   studentClass.value = "";

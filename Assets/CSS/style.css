@@ -1,3 +1,7 @@
+:root {
+  --primary:  #1f4e79;
+}
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -7,7 +11,7 @@ form {
   width: 700px;
   margin: 50px auto;
   padding: 30px;
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -86,7 +90,7 @@ form h2 {
   width: 700px;
   margin: 50px auto;
   padding: 30px;
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -110,10 +114,18 @@ form h2 {
 
 /* Deep Touch */
 
+form {
+  border-color: var(--primary);
+}
+
+#resultCard {
+  border-color: var(--primary);
+}
+
 /* Primary Color for Headings */
 h1,
 h2 {
-  color: #1f4e79;
+  color: var(--primary);
 }
 
 /* Rounded Input Fields */
@@ -123,6 +135,15 @@ select {
   border-radius: 6px;
   padding: 8px;
 }
+
+.studentInfo > input, .subjectField > input, .remarksSection > input {
+  border-color: var(--primary);
+}
+
+.studentInfo > #studentClass {
+  border-color: var(--primary);
+}
+
 
 @media (max-width: 768px) {
   form {
