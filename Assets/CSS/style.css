@@ -144,6 +144,9 @@ select {
   border-color: var(--primary);
 }
 
+#resultCard h2{
+  border-bottom-color: var(--primary);
+}
 
 @media (max-width: 768px) {
   form {
